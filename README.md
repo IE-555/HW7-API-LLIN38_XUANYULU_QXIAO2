@@ -26,7 +26,7 @@ Our team choose NYC MTA API to access its real-time data feed for analyses, the 
 - *The source of the data is provided on MTA website: (http://web.mta.info/developers/index.html).*  
 - *By running our code, we see the data is updated real-time.*
 
-To request data from the MTA, you'll also need a free API key:
+To request data from the MTA, you'll also need a free API key.
 [Register here](https://api.mta.info/).
 
 
@@ -159,11 +159,27 @@ A snapshot of "Schedule2" dataframe is shown below:
 
 <br/>
 
+- Then we can find nearest top 10 stations:
+```
+stop = []
+for i in range(10):
+    stop.append(sch_df.iloc[i]['stop_id'])
+print(stop)
+```
 
-A snapshot of stops longtitude and latitude:
+- A text "Stop.txt" also shows information coordinates for each stop:
+![Image of Plot](images/stops_txt.PNG)
+
+- The stops information can be read and stored as dataframe named "coord_df":
+```
+coord_df = pd.read_csv('stops.txt')
+print(coord_df)
+```
+
+- A snapshot of stops longtitude and latitude information shown in dataframe "coord_df":
 ![Image of Plot](images/stop_latlong.PNG)
 
-Then find stop name.
+- Then the top 10 stations' names could be found respectively:
 ```
 stop_name = []
 
@@ -172,7 +188,7 @@ for i in range(10):
 print(stop_name)
 ```
 
-Find stop coordinates.
+- Find these 10 stops coordinates:
 ```
 x_lat = []
 
@@ -189,6 +205,19 @@ for i in range(10):
 print(x_lon)
 ```
 
+- Then find time for these 10 stops, if missing upcoming train, how many minutes need wait for next one:
+```
+lag_min = []
+
+for i in range(10):
+    dt1 = datetime.combine(date.today(), sch_df.iloc[i].values[3])
+    dt2 = datetime.combine(date.today(), sch_df.iloc[i].values[4])
+    sec1 = dt2 - dt1
+    lag = sec1.total_seconds()/60
+    lag_min.append(lag)
+print (lag_min)
+```
+
 <br/>
 
 
@@ -196,9 +225,9 @@ print(x_lon)
 
 <br/>
 
-Plot 1: Scatter plot of top 10 stations waiting time
+Plot 1: Scatter plot of top 10 stations waiting time if the passenger missing the upcoming one (the longer waiting, the bigger the plot, x-axis: latitude, y-axis: longtitude):
 ```
-plt.title ('Time Lag (minutes) for nearest top 20 stops')
+plt.title ('Time Lag (minutes) for nearest top 10 stops')
 #plt.scatter (x_lat, x_lon, s = lag_min);
 
 #different color
@@ -246,8 +275,6 @@ y = times.dropna()[3::]
 x = range(0, len(y), 1)
 ```
 
-
-
 Finally, we visualize the data. We save our plot as a png. image.
 - Each line of code below correspondes to one of the adjustments, respectively.
 	- Plot times data using matplotlib, adjust the plot size, plot title, x and y labels, graph a line plot, label data points, and save plot to png.
@@ -271,62 +298,7 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_TimeGap.png)
-
-
-Plot3: Average Time Interval of Q Train Stops
-This plot will plot the average time interval for each Q train stops from the data source in order to show the busyness of the train station for further constrction purposes.
-
-First, we select Q train stops from the dataframe and put it into a new dataframe q_schedule by looping through to select stops belong to Q train
-
-```
-index_list = list(Schedule.index)
-index_q = []
-
-for q in index_list:
-    if 'Q' in q:
-        index_q.append(q)
-q_schedule = Schedule.loc[index_q, :]
-```
-Then, we calculate the time interval for all stops, compute the average and convert it into seconds for better visulization
-
-```
-time_interval = []
-for i in range(len(q_schedule.columns)-1):
-    time_interval.append(list(q_schedule[i+1] - q_schedule[i]))
-
-# convert time intervals from timedelta format to seconds
-for a in range(len(time_interval)):
-    for b in range(len(time_interval[a])):
-        time_interval[a][b] = time_interval[a][b].total_seconds()
-
-# convert time interval data from lists to dataframe
-time_interval_df = pd.DataFrame(time_interval)
-
-# Calculate the average time interval of all stops
-average_time_interval = list(time_interval_df.mean())
-q_schedule['Average Time Interval'] = average_time_interval
-```
-
-Finally, plot the average time interval into bar chart for visulization and save it as png file
-
-```
-# set labels and x axis of the plot
-labels = list(q_schedule.index)
-x = range(len(labels))
-
-# Plot the Average Time Interval for different Q train stops
-fig, ax = plt.subplots()
-
-# mark title, x and y axis labels
-plt.bar(x, average_time_interval)
-plt.xticks(x, labels)
-ax.set_ylabel('Average Time Interval')
-ax.set_xlabel('Stops')
-ax.set_title('Average Time Interval for Q Train Stops');
-```
-The output from this code is shown below:
-![Image of Plot](images/MTA_ATI.png)
+![Image of Plot](images/MTA_Plot2.png)
 
 ---
 
