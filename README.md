@@ -5,7 +5,9 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 
 ---
 
+
 ## Introduction(Qingy)
+
 Our team choose NYC MTA API to access its real-time data feed for analyses, the API key by MTA.
 - *The type of data importing is All NYC 30 subway lines from route "1" to "SI", each line at all its stop_id expected arrival time.* 
 
@@ -27,7 +29,9 @@ Our team choose NYC MTA API to access its real-time data feed for analyses, the 
 To request data from the MTA, you'll also need a free API key.
 [Register here](https://api.mta.info/).
 
+
 ---
+
 
 ## Sources
 
@@ -45,27 +49,54 @@ References used in Data Visualization section
 - [Add variable to plot title](https://stackoverflow.com/questions/43757820/how-to-add-a-variable-to-python-plt-title)
 - [Lable data points on plot](https://stackoverflow.com/questions/14432557/matplotlib-scatter-plot-with-different-text-at-each-data-point)
 
+
 ---
 
-## Explanation of the Code (Qingy part)
-- Install
 
-``` sh
-pip install underground
-```
-
-## Explanation of the Code (Ling part)
+## Explanation of the Code 
 
 The code, `HW7_NYC_MTA_API.ipynb`, begins by importing necessary Python packages:
 - Use a "magic command" to specify how we want our plots displayed
 - %matplotlib notebook show the dynamic/interactive plot
 
 ```
+import os
+from underground import metadata, SubwayFeed
+
 import pandas as pd
+
+from datetime import date
+from datetime import datetime
 
 %matplotlib notebook
 import matplotlib.pyplot as plt
+
 ```
+<br/>
+
+**In this section of code, we will import data from online API source.**
+
+<br/>
+- First we need a free API key to request data from the MTA.
+- Identify the route information we want to see, route Q is selected as example
+- Get route feed
+
+```
+API_KEY = '5H3pxsm5LT8OwtBs9LWoWaNGf0j67zER1dxQL214' 
+ROUTE = 'Q'  
+feed = SubwayFeed.get(ROUTE, api_key=API_KEY)
+```
+
+- Get route raw data of route Q and its expected arrival times
+```
+q_train_stops = feed.extract_stop_dict()[ROUTE]
+q_train_stops
+```
+
+A snapshot of "q_train_stops" data is shown below:
+![Image of Plot](images/Q_train.png)
+
+
 <br/>
 
 **In this section of code, we will transform the API data into a python dataframe.**
@@ -256,7 +287,11 @@ The output from this code is shown below:
 - *NOTE: You are welcome to provide instructions using Anaconda or IPython.*
 
 ## How to Run the Code (Xuanyu)
+- Install
 
+``` 
+pip install underground
+```
 ---
 
 ## Suggestions
