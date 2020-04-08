@@ -371,11 +371,31 @@ The output from this code is shown below:
 - *NOTE: You are welcome to provide instructions using Anaconda or IPython.*
 
 ## How to Run the Code (Xuanyu)
-- Install
 
-``` 
+From terminal window
+
+1) Install the underground package
+
+```
 pip install underground
 ```
+
+2) Change directory to
+
+```
+cd
+```
+
+3) Type the following command to open jupyter notebook
+
+```
+jupyter notebook
+```
+
+4) Open the notebook file HW7_NYC_MTA_API.ipynb
+
+5) Run through the codes and the plots is shown and saved in the same directory
+
 ---
 
 ## Suggestions
