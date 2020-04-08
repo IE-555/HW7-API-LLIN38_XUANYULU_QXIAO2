@@ -79,6 +79,7 @@ import matplotlib.pyplot as plt
 **In this section of code, we will import data from online API source.**
 
 <br/>
+
 - First we need a free API key to request data from the MTA.
 - Identify the route information we want to see, route Q is selected as example
 - Get route feed
@@ -92,7 +93,6 @@ feed = SubwayFeed.get(ROUTE, api_key=API_KEY)
 - Get route raw data of route Q and its expected arrival times
 ```
 q_train_stops = feed.extract_stop_dict()[ROUTE]
-q_train_stops
 ```
 
 A snapshot of "q_train_stops" data is shown below:
