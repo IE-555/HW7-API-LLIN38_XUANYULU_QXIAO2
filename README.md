@@ -72,8 +72,8 @@ from datetime import datetime
 
 %matplotlib notebook
 import matplotlib.pyplot as plt
-
 ```
+
 <br/>
 
 **In this section of code, we will import data from online API source.**
