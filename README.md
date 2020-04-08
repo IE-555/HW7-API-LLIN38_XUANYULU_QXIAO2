@@ -173,9 +173,63 @@ A snapshot of "Schedule2" dataframe is shown below:
 ![Image of Plot](images/Schedule2.png)
 <br/>
 
+- A snapshot of stops longtitude and latitude:
+![Image of Plot](images/stop_latlong.PNG)
 
+Then find stop name.
+```
+stop_name = []
+
+for i in range(10):
+    stop_name.append(coord_df.loc[coord_df['stop_id'] == stop[i],'stop_name'].values[0][0:20])
+print(stop_name)
+```
+
+Find stop coordinates.
+```
+x_lat = []
+
+for i in range(10):
+    x_lat.append(coord_df.loc[coord_df['stop_id'] == stop[i],'stop_lat'].values[0])
+print(x_lat)
+```
+
+```
+x_lon = []
+
+for i in range(10):
+    x_lon.append(coord_df.loc[coord_df['stop_id'] == stop[i],'stop_lon'].values[0])
+print(x_lon)
+```
 
 **In this section of code, we will visualize the data and save them as png. images.**
+
+Plot scatter plot of top 10 stations waiting time:
+```
+plt.title ('Time Lag (minutes) for nearest top 20 stops')
+#plt.scatter (x_lat, x_lon, s = lag_min);
+
+#different color
+colors = []
+for i in range (10):
+    colors . append ( lag_min [i]/float(max(lag_min)))
+
+plt.scatter(x_lat, x_lon ,s = lag_min, c=colors , alpha =1);
+
+#add text
+for i in range (10):
+    myx = x_lat[i]
+    myy = x_lon[i]
+    mystop = stop_name [i]
+    plt. text (myx , myy , mystop , color ="red", fontsize =7,horizontalalignment='left',verticalalignment='top')
+    
+# x and y labels
+plt.ylabel('Station Longtitude')
+plt.xlabel('Station Latitude')
+```
+
+The output from this code is shown below:
+![Image of Plot](images/MTA_Plot1.png)
 
 <br/>
 
@@ -223,7 +277,7 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_Plot1.png)
+![Image of Plot](images/TimeLag.png)
 
 
 
