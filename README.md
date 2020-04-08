@@ -6,7 +6,7 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 ---
 
 
-## Introduction(Qingy)
+## Introduction
 
 Our team choose NYC MTA API to access its real-time data feed for analyses, the API key by MTA.
 - *The type of data importing is All NYC 30 subway lines from route "1" to "SI", each line at all its stop_id expected arrival time.* 
