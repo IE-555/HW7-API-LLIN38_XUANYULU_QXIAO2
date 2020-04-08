@@ -404,9 +404,10 @@ jupyter notebook
 
 ## Suggestions (Ling)
 - Our API code above selected route "Q" in NYC MTA system as an example. Users can select any one of the 30 routes in MTA system that they wish to analyze.
-- In plot 1, users are also free to select any one of the train stops that they wish to know the arrival schedule of by modifying the "id" variable.
-- Users can perform a subtraction between the arrivals (e.g. Arrival 2 time - Arrival 1 time) to calculate the actual time gap of the arrivals in minutes. Users then can plot this information to see how times between arrivals fluctuate. 
 - For the scatter plot, the plot can be drawn with more degree of distinction and the waiting time is better plotted on.
+- In the time gap plot, users are also free to select any one of the train stops that they wish to know the arrival schedule of by modifying the "id" variable.
+- Users can perform a subtraction between the arrivals (e.g. Arrival 2 time - Arrival 1 time) to calculate the actual time gap of the arrivals in minutes. Users then can plot this information to see how times between arrivals fluctuate. 
+
 
 **Future Works**
 - Match stop id with the acutal stop name by utilizing the provided stops.txt file
