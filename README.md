@@ -269,7 +269,7 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_Plot2.png)
+![Image of Plot](images/MTA_TimeGap.png)
 
 ---
 
