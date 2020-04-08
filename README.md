@@ -160,7 +160,6 @@ Schedule2
 A snapshot of "Schedule2" dataframe is shown below:
 ![Image of Plot](images/Schedule2.png)
 
-
 <br/>
 
 
