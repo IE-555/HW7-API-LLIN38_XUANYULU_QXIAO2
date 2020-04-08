@@ -125,9 +125,11 @@ Schedule2
 ```
 A snapshot of "Schedule2" dataframe is shown below:
 ![Image of Plot](images/Schedule2.png)
+
 <br/>
 
-- A snapshot of stops longtitude and latitude:
+
+A snapshot of stops longtitude and latitude:
 ![Image of Plot](images/stop_latlong.PNG)
 
 Then find stop name.
@@ -161,7 +163,7 @@ print(x_lon)
 
 **In this section of code, we will visualize the data and save them as png. images.**
 
-Plot 1: Scatter plot of top 10 stations waiting time:
+Plot 1: Scatter plot of top 10 stations waiting time
 ```
 plt.title ('Time Lag (minutes) for nearest top 20 stops')
 #plt.scatter (x_lat, x_lon, s = lag_min);
