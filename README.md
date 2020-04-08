@@ -96,6 +96,8 @@ q_train_stops
 ```
 
 A snapshot of "q_train_stops" data is shown below:
+
+
 ![Image of Plot](images/Q_train.png)
 
 
