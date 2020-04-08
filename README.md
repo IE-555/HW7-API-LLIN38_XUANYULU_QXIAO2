@@ -4,23 +4,23 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 
 ---
 
-## Introduction
-We get the API key by NYC MTA.
-- *The type of data importing is All NYC 30 subway lines from route "1" to "SI"* 
+## Introduction(Qingy)
+Our team choose NYC MTA API to access its real-time data feed for analyses, the API key by MTA.
+- *The type of data importing is All NYC 30 subway lines from route "1" to "SI", each line at all its stop_id expected arrival time.* 
 
 ![Image of Plot](images/routes.PNG)
 
-- *Describe the source of the data.  Include URLs.*  
-- *Explain how recent is this data?  How often is it updated?*
+![Image of Plot](images/stop_id_expar_v2.PNG)
+
+- *The source of the data is provided on MTA website: (http://web.mta.info/developers/index.html).*  
+- *By our code running, we see the data is updated real-time.*
+
+To request data from the MTA, you'll also need a free API key.
+[Register here](https://api.mta.info/).
 
 ---
 
 ## Sources
-*In this section, provide links to your references.  For example:*
-- The source code came from [the magic source code farm](http://www.amagicalnonexistentplace.com)
-- The code retrieves data from [the organization for hosting cool data](http://www.anothermagicalnonexistentplace.com)
-
-## Sources (Not done, add in the references you used)
 
 References for API
 - The source code came from [a GitHub repository.](https://github.com/nolanbconaway/underground)
@@ -35,8 +35,6 @@ References used in Transform API data to Python Dataframe section
 References used in Data Visualization section
 - [Add variable to plot title](https://stackoverflow.com/questions/43757820/how-to-add-a-variable-to-python-plt-title)
 - [Lable data points on plot](https://stackoverflow.com/questions/14432557/matplotlib-scatter-plot-with-different-text-at-each-data-point)
-- []()
-- []()
 
 ---
 
@@ -72,13 +70,16 @@ The output from this code is shown below:
 
 ![Image of Plot](images/samplefigure.png)
 
-
-
 ---
 
+## Explanation of the Code (Qingy part)
+- Install
 
-## Explanation of the Code (Ling's part)
+``` sh
+pip install underground
+```
 
+## Explanation of the Code (Ling part)
 
 The code, `HW7_MTA_API.ipynb`, begins by importing necessary Python packages:
 - Use a "magic command" to specify how we want our plots displayed
