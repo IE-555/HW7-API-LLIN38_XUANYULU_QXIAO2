@@ -248,4 +248,4 @@ The output from this code is shown below:
 
 **Future Works**
 - Match stop id with the acutal stop name by utilizing the provided stops.txt file
-- This API provides the real-time MTA train arrival schedule. We can gather and compare the real-time schedule with the pre-set schedule to anaylze the early-arrivals or delays in MTA system.
+- This API provides the real-time MTA train arrival schedule. We can collect and compare the real-time schedule with the pre-set schedule to anaylze the early-arrivals or delays in MTA system.
