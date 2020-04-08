@@ -26,7 +26,7 @@ Our team choose NYC MTA API to access its real-time data feed for analyses, the 
 - *The source of the data is provided on MTA website: (http://web.mta.info/developers/index.html).*  
 - *By running our code, we see the data is updated real-time.*
 
-To request data from the MTA, you'll also need a free API key.
+To request data from the MTA, you'll also need a free API key:
 [Register here](https://api.mta.info/).
 
 
