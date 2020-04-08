@@ -113,7 +113,7 @@ The API data comes in as a dictionary format.
 Schedule = pd.DataFrame.from_dict(q_train_stops, orient='index')
 Schedule
 ```
-"Schedule" dataframe looks like:
+A snapshot of "Schedule" dataframe is shown below:
 ![Image of Plot](images/Schedule.png)
 
 
@@ -157,7 +157,7 @@ Display what does the cleaned dataframe looks like now
 ```
 Schedule2
 ```
-"Schedule2" dataframe looks like:
+A snapshot of "Schedule2" dataframe is shown below:
 ![Image of Plot](images/Schedule2.png)
 
 
