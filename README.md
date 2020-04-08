@@ -4,21 +4,14 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 
 ---
 
-**NOTE**:  The *italicized* content below is for your reference only.  Please remove these comments before submitting.
-
----
-
 ## Introduction
-*The purpose of this section is to provide some information about the data you're exploring.  For example, you should*
-- *Describe the type of data that you're importing.* 
+We get the API key by NYC MTA.
+- *The type of data importing is All NYC 30 subway lines from route "1" to "SI"* 
+
+![Image of Plot](images/routes.png)
+
 - *Describe the source of the data.  Include URLs.*  
 - *Explain how recent is this data?  How often is it updated?*
-
-## Introduction (Qingyang)
-- 
-- 
-- 
-
 
 ---
 
