@@ -56,7 +56,7 @@ References used in Data Visualization section
 ## Explanation of the Code 
 
 The code, `HW7_NYC_MTA_API.ipynb`, begins by importing necessary Python packages:
-- Please refer to section **How to Run the Code** for instructions on package installation
+- Please refer to section **How to Run the Code** for instructions on packages installation
 - os and underground packages are necessary for using MTA API
 - Use a "magic command" to specify how we want our plots displayed
 - %matplotlib notebook show the dynamic/interactive plot
