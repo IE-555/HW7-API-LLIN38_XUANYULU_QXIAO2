@@ -247,5 +247,5 @@ The output from this code is shown below:
 - Users can perform a subtraction between the arrivals (e.g. Arrival 2 time - Arrival 1 time) to calculate the actual time gap of the arrivals in minutes. Users then can plot these information to see how time between arrivals fluctuate. 
 
 **Future Works**
-- Match stop id with the acutal stop name by using the provided stops.txt file
-- 
+- Match stop id with the acutal stop name by utilizing the provided stops.txt file
+- This API provides the real-time MTA train arrival schedule. We can gather and compare the real-time schedule with the pre-set schedule to anaylze the early-arrivals or delays in MTA system.
