@@ -6,7 +6,7 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 ---
 
 
-## Introduction(Qingy)
+## Introduction (Qingy)
 
 Our team choose NYC MTA API to access its real-time data feed for analyses, the API key by MTA.
 - *The type of data importing is All NYC 30 subway lines from route "1" to "SI", each line at all its stop_id expected arrival time.* 
@@ -56,6 +56,8 @@ References used in Data Visualization section
 ## Explanation of the Code 
 
 The code, `HW7_NYC_MTA_API.ipynb`, begins by importing necessary Python packages:
+- Please refer to section **How to Run the Code** for instructions on package installation
+- os and underground packages are necessary for using MTA API
 - Use a "magic command" to specify how we want our plots displayed
 - %matplotlib notebook show the dynamic/interactive plot
 
