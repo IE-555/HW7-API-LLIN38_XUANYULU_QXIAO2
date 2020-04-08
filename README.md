@@ -27,8 +27,6 @@ Our team choose NYC MTA API to access its real-time data feed for analyses, the 
 To request data from the MTA, you'll also need a free API key.
 [Register here](https://api.mta.info/).
 
-
-
 ---
 
 ## Sources
@@ -47,46 +45,6 @@ References used in Data Visualization section
 - [Add variable to plot title](https://stackoverflow.com/questions/43757820/how-to-add-a-variable-to-python-plt-title)
 - [Lable data points on plot](https://stackoverflow.com/questions/14432557/matplotlib-scatter-plot-with-different-text-at-each-data-point)
 
-
-
-
----
-
-## Explanation of the Code
-*In this section you should provide a more detailed explanation of what, exactly, the above code actually does.  Your classmates should be able to read your explanation and understand what is happening in the code.*
-
-The code, `needs_a_good_name.py`, begins by importing necessary Python packages:
-```
-import matplotlib.pyplot as plt
-```
-
-- *NOTE:  If a package does not come pre-installed with Anaconda, you'll need to provide instructions for installing that package here.*
-
-We then import data from [insert name of data source].  We print the data to allow us to verify what we've imported:
-```
-x = [1, 3, 4, 7]
-y = [2, 5, 1, 6]
-
-for i in range(0,len(x)):
-	print "x[%d] = %f" % (i, x[i])		
-```
-- *NOTE 1:  This sample code doesn't actually import anything.  You'll need your code to grab live data from an online source.*  
-- *NOTE 2:  You will probably also need to clean/filter/re-structure the raw data.  Be sure to include that step.*
-
-Finally, we visualize the data.  We save our plot as a `.png` image:
-```
-plt.plot(x, y)
-plt.savefig('samplefigure.png')	
-plt.show()
-```
-
-The output from this code is shown below:
-
-![Image of Plot](images/samplefigure.png)
-
-
-
-
 ---
 
 ## Explanation of the Code (Qingy part)
@@ -95,8 +53,6 @@ The output from this code is shown below:
 ``` sh
 pip install underground
 ```
-
-
 
 ## Explanation of the Code (Ling part)
 
@@ -112,11 +68,9 @@ import matplotlib.pyplot as plt
 ```
 <br/>
 
-
 **In this section of code, we will transform the API data into a python dataframe.**
 
 <br/>
-
 
 The API data comes in as a dictionary format.
 - Convert API data from dictionary format into a python dataframe
@@ -229,7 +183,7 @@ plt.xlabel('Station Latitude')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_Plot1.png)
+![Image of Plot](images/TimeLag.png)
 
 <br/>
 
@@ -277,10 +231,7 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/TimeLag.png)
-
-
-
+![Image of Plot](images/MTA_Plot1.png)
 
 ---
 
@@ -299,9 +250,6 @@ The output from this code is shown below:
 
 ## How to Run the Code (Xuanyu)
 
-
-
-
 ---
 
 ## Suggestions
@@ -316,5 +264,3 @@ The output from this code is shown below:
 **Future Works**
 - Match stop id with the acutal stop name by utilizing the provided stops.txt file
 - This API provides the real-time MTA train arrival schedule. We can collect and compare the real-time schedule with the pre-set schedule to anaylze the early-arrivals or delays in MTA system.
-
-
