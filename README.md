@@ -159,8 +159,8 @@ Schedule2
 ```
 A snapshot of "Schedule2" dataframe is shown below:
 ![Image of Plot](images/Schedule2.png)
-
 <br/>
+
 
 **In this section of code, we will visualize the data and save them as png. images.**
 
@@ -210,7 +210,6 @@ plt.savefig('MTA_Plot1.png')
 
 The output from this code is shown below:
 ![Image of Plot](images/MTA_Plot1.png)
-
 
 
 
