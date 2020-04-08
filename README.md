@@ -113,6 +113,9 @@ The API data comes in as a dictionary format.
 Schedule = pd.DataFrame.from_dict(q_train_stops, orient='index')
 Schedule
 ```
+"Schedule" dataframe looks like:
+![Image of Plot](images/Schedule.png)
+
 
 The original index of "Schedule" dataframe is stop id.
 - Add stop id (the index) to be a new column of the dataframe
@@ -154,6 +157,9 @@ Display what does the cleaned dataframe looks like now
 ```
 Schedule2
 ```
+"Schedule2" dataframe looks like:
+![Image of Plot](images/Schedule2.png)
+
 
 <br/>
 
