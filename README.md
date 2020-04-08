@@ -301,7 +301,59 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_Plot2.png)
+![Image of Plot](images/MTA_TimeGap.png)
+
+<br/>
+
+Plot 3: Average Time Interval of Q Train Stops
+This figure plots the average time interval for each Q train stops from the data source in order to show the busyness of the train station for further constrction purposes.
+
+First, we select Q train stops from the dataframe and put it into a new dataframe q_schedule by looping through to select stops belong to Q train
+
+```
+index_list = list(Schedule.index)
+index_q = []
+for q in index_list:
+    if 'Q' in q:
+        index_q.append(q)
+q_schedule = Schedule.loc[index_q, :]
+```
+Then, we calculate the time interval for all stops, compute the average and convert it into seconds for better visulization
+
+```
+time_interval = []
+for i in range(len(q_schedule.columns)-1):
+    time_interval.append(list(q_schedule[i+1] - q_schedule[i]))
+# convert time intervals from timedelta format to seconds
+for a in range(len(time_interval)):
+    for b in range(len(time_interval[a])):
+        time_interval[a][b] = time_interval[a][b].total_seconds()
+# convert time interval data from lists to dataframe
+time_interval_df = pd.DataFrame(time_interval)
+# Calculate the average time interval of all stops
+average_time_interval = list(time_interval_df.mean())
+q_schedule['Average Time Interval'] = average_time_interval
+```
+
+Finally, plot the average time interval into bar chart for visulization and save it as png file
+
+```
+# set labels and x axis of the plot
+labels = list(q_schedule.index)
+x = range(len(labels))
+# Plot the Average Time Interval for different Q train stops
+fig, ax = plt.subplots()
+# mark title, x and y axis labels
+plt.bar(x, average_time_interval)
+plt.xticks(x, labels)
+ax.set_ylabel('Average Time Interval')
+ax.set_xlabel('Stops')
+ax.set_title('Average Time Interval for Q Train Stops');
+```
+
+The output from this code is shown below:
+![Image of Plot](images/MTA_ATI.png)
+
 
 ---
 
