@@ -163,6 +163,8 @@ print(x_lon)
 
 **In this section of code, we will visualize the data and save them as png. images.**
 
+<br/>
+
 Plot 1: Scatter plot of top 10 stations waiting time
 ```
 plt.title ('Time Lag (minutes) for nearest top 20 stops')
