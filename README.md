@@ -38,7 +38,7 @@ References used in Transform API data to Python Dataframe section
 - [Convert dataframe index to a new column](https://thispointer.com/pandas-convert-dataframe-index-into-column-using-dataframe-reset_index-in-python/)
 - [Rename dataframe column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html)
 - [Add a new column to a specific position of dataframe](https://discuss.codecademy.com/t/can-we-add-a-new-column-at-a-specific-position-in-a-pandas-dataframe/355842)
-- [Extract time information from Timestamp](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html)
+- [Extract time information from Timestamp data](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html)
 
 References used in Data Visualization section
 - [Add variable to plot title](https://stackoverflow.com/questions/43757820/how-to-add-a-variable-to-python-plt-title)
