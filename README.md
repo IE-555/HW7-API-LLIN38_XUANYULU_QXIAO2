@@ -108,7 +108,7 @@ import matplotlib.pyplot as plt
 
 The API data comes in as a dictionary format.
 - Convert API data from dictionary format into a python dataframe
-- Display what does the original dataframe looks like
+- Display the original dataframe
 ```
 Schedule = pd.DataFrame.from_dict(q_train_stops, orient='index')
 Schedule
@@ -119,15 +119,15 @@ A snapshot of "Schedule" dataframe is shown below:
 
 The original index of "Schedule" dataframe is stop id.
 - Add stop id (the index) to be a new column of the dataframe
-- Rename the newly added column as "stop_id".
+- Rename the newly added column as "stop_id"
 ```
 Schedule1 = Schedule.reset_index()
 Schedule2 = Schedule1.rename(columns={'index':'stop_id'})
 ```
 
 The last character of stop_id tells the direction of the stop (N represents North, S represents South).
-- Read the last character of stop_id to identify the direction.
-- Insert the new direction column to a specific postion, e.g. column position 1 in this case.
+- Read the last character of stop_id to identify the direction
+- Insert the new direction column to a specific postion, e.g. column position 1 in this case
 ```
 Direction = []
 
@@ -153,7 +153,7 @@ for j in range(0, len(Schedule2)):                   # loop through rows
             Schedule2.iloc[j, k] = pd.Timestamp.time(Schedule2.iloc[j, k])
 ```            
 
-Display what does the cleaned dataframe looks like now
+Display the cleaned dataframe
 ```
 Schedule2
 ```
