@@ -8,9 +8,17 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 Our team choose NYC MTA API to access its real-time data feed for analyses, the API key by MTA.
 - *The type of data importing is All NYC 30 subway lines from route "1" to "SI", each line at all its stop_id expected arrival time.* 
 
+- Route information:
+
 ![Image of Plot](images/routes.PNG)
 
+- Specific train newest expected arrival time at each stop:
+
 ![Image of Plot](images/stop_id_expar_v2.PNG)
+
+- Latitude and Longtitude of each subway stop:
+
+![Image of Plot](images/stop_latlong.PNG)
 
 - *The source of the data is provided on MTA website: (http://web.mta.info/developers/index.html).*  
 - *By our code running, we see the data is updated real-time.*
