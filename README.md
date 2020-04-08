@@ -380,10 +380,10 @@ From terminal window
 pip install underground
 ```
 
-2) Change directory to
+2) Change directory to hw7-api-llin38-master
 
 ```
-cd
+cd /hw7-api-llin38-master/
 ```
 
 3) Type the following command to open jupyter notebook
