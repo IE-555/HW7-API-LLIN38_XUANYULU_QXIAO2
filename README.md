@@ -8,7 +8,7 @@ Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 We get the API key by NYC MTA.
 - *The type of data importing is All NYC 30 subway lines from route "1" to "SI"* 
 
-![Image of Plot](images/routes.png)
+![Image of Plot](images/routes.PNG)
 
 - *Describe the source of the data.  Include URLs.*  
 - *Explain how recent is this data?  How often is it updated?*
