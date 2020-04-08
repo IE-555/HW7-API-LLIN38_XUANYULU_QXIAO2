@@ -325,8 +325,8 @@ ax.set_ylabel('Average Time Interval')
 ax.set_xlabel('Stops')
 ax.set_title('Average Time Interval for Q Train Stops');
 ```
-The figure below shows plot3
-
+The output from this code is shown below:
+![Image of Plot](images/MTA_ATI.png)
 
 ---
 
