@@ -137,7 +137,7 @@ Schedule2.insert(1, 'direction', Direction)
 
 The original time columns are in Timestamp format, which contains both date and time information.
 - Extract date information from the Timestamp column
-- Create a new column and insert it to column position 2 of the dataframe
+- Create a new column for date and insert it to column position 2 of the dataframe
 ```
 Schedule2.insert(2, 'date', Schedule2[0].dt.date)
 ```
