@@ -2,6 +2,7 @@
 
 Authors:  **Ling Lin**, **Xuanyu Lu** and **Qingyang Xiao**
 
+
 ---
 
 ## Introduction(Qingy)
@@ -26,6 +27,8 @@ Our team choose NYC MTA API to access its real-time data feed for analyses, the 
 To request data from the MTA, you'll also need a free API key.
 [Register here](https://api.mta.info/).
 
+
+
 ---
 
 ## Sources
@@ -43,6 +46,9 @@ References used in Transform API data to Python Dataframe section
 References used in Data Visualization section
 - [Add variable to plot title](https://stackoverflow.com/questions/43757820/how-to-add-a-variable-to-python-plt-title)
 - [Lable data points on plot](https://stackoverflow.com/questions/14432557/matplotlib-scatter-plot-with-different-text-at-each-data-point)
+
+
+
 
 ---
 
@@ -78,6 +84,9 @@ The output from this code is shown below:
 
 ![Image of Plot](images/samplefigure.png)
 
+
+
+
 ---
 
 ## Explanation of the Code (Qingy part)
@@ -86,6 +95,8 @@ The output from this code is shown below:
 ``` sh
 pip install underground
 ```
+
+
 
 ## Explanation of the Code (Ling part)
 
@@ -105,6 +116,7 @@ import matplotlib.pyplot as plt
 **In this section of code, we will transform the API data into a python dataframe.**
 
 <br/>
+
 
 The API data comes in as a dictionary format.
 - Convert API data from dictionary format into a python dataframe
@@ -167,6 +179,7 @@ A snapshot of "Schedule2" dataframe is shown below:
 
 <br/>
 
+
 Plot 1: This plot illustrates the time gap between train arrivals for a pre-identified stop.
 - First, identify the stop_id that we want to search
 - In this case, we use stop 'Q05N' as the pre-identified stop
@@ -214,6 +227,7 @@ The output from this code is shown below:
 
 
 
+
 ---
 
 ## How to Run the Code
@@ -233,6 +247,7 @@ The output from this code is shown below:
 
 
 
+
 ---
 
 ## Suggestions
@@ -247,3 +262,5 @@ The output from this code is shown below:
 **Future Works**
 - Match stop id with the acutal stop name by utilizing the provided stops.txt file
 - This API provides the real-time MTA train arrival schedule. We can collect and compare the real-time schedule with the pre-set schedule to anaylze the early-arrivals or delays in MTA system.
+
+
