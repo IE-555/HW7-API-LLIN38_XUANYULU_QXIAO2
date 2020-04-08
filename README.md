@@ -203,16 +203,16 @@ print(x_lon)
 Plot 1: Scatter plot of top 10 stations waiting time
 ```
 plt.title ('Time Lag (minutes) for nearest top 20 stops')
-#plt.scatter (x_lat, x_lon, s = lag_min);
+# plt.scatter (x_lat, x_lon, s = lag_min);
 
-#different color
+# different color
 colors = []
 for i in range (10):
     colors . append ( lag_min [i]/float(max(lag_min)))
 
 plt.scatter(x_lat, x_lon ,s = lag_min, c=colors , alpha =1);
 
-#add text
+# add text
 for i in range (10):
     myx = x_lat[i]
     myy = x_lon[i]
@@ -274,6 +274,26 @@ plt.savefig('MTA_Plot1.png')
 
 The output from this code is shown below:
 ![Image of Plot](images/MTA_TimeGap.png)
+
+
+<br/>
+
+
+Plot 3: This plot illustrates the average time interval of Q train stops in seconds.
+
+
+
+
+
+
+
+
+
+
+
+
+The output from this code is shown below:
+![Image of Plot](images/MTA_ATI.png)
 
 ---
 
