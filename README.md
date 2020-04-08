@@ -156,9 +156,12 @@ for i in range(10):
 print(x_lon)
 ```
 
+<br/>
+
+
 **In this section of code, we will visualize the data and save them as png. images.**
 
-Plot scatter plot of top 10 stations waiting time:
+Plot 1: Scatter plot of top 10 stations waiting time:
 ```
 plt.title ('Time Lag (minutes) for nearest top 20 stops')
 #plt.scatter (x_lat, x_lon, s = lag_min);
@@ -188,7 +191,7 @@ The output from this code is shown below:
 <br/>
 
 
-Plot 1: This plot illustrates the time gap between train arrivals for a pre-identified stop.
+Plot 2: This plot illustrates the time gap between train arrivals for a pre-identified stop.
 - First, identify the stop_id that we want to search
 - In this case, we use stop 'Q05N' as the pre-identified stop
 ```
@@ -231,7 +234,7 @@ plt.savefig('MTA_Plot1.png')
 ```
 
 The output from this code is shown below:
-![Image of Plot](images/MTA_Plot1.png)
+![Image of Plot](images/MTA_Plot2.png)
 
 ---
 
