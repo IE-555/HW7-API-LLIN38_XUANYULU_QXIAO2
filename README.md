@@ -241,5 +241,5 @@ The output from this code is shown below:
 - Users can perform a subtraction between the arrivals (e.g. Arrival 2 time - Arrival 1 time) to calculate the actual time gap of the arrivals in mintues. Users then can plot these information to see how time between arrivals fluctuate. 
 
 **Future Works**
-- Match stop_id with the acutal stop name
+- Match stop id with the acutal stop name
 - 
