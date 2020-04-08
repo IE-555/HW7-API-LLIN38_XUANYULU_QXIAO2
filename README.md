@@ -162,6 +162,7 @@ A snapshot of "Schedule2" dataframe is shown below:
 <br/>
 
 
+
 **In this section of code, we will visualize the data and save them as png. images.**
 
 <br/>
