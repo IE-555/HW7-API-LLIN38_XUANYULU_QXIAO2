@@ -56,7 +56,7 @@ pip install underground
 
 ## Explanation of the Code (Ling part)
 
-The code, `HW7_MTA_API.ipynb`, begins by importing necessary Python packages:
+The code, `HW7_NYC_MTA_API.ipynb`, begins by importing necessary Python packages:
 - Use a "magic command" to specify how we want our plots displayed
 - %matplotlib notebook show the dynamic/interactive plot
 
