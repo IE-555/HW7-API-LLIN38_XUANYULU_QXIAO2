@@ -237,9 +237,12 @@ plt.title ('Time Lag (minutes) for nearest top 10 stops')
 # Different color
 colors = []
 for i in range (10):
-    colors . append ( lag_min [i]/float(max(lag_min)))
+    colors.append( 1/ (lag_min [i]/float(max(lag_min))) )
 
-plt.scatter(x_lat, x_lon ,s = lag_min, c=colors , alpha =1);
+plt.scatter(x_lat, x_lon, s = lag_t, c=colors , alpha =1);
+
+# Color of the circle: Lighter the color, shorter the time lag
+# Size of the circle: Smaller the circle, shorter the time lag
 
 # Add text
 for i in range (10):
