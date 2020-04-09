@@ -231,16 +231,16 @@ Finally, we visualize the data. We save our plot as a png. image.
 
 ```
 plt.title ('Time Lag (minutes) for nearest top 10 stops')
-#plt.scatter (x_lat, x_lon, s = lag_min);
+# plt.scatter (x_lat, x_lon, s = lag_min);
 
-#different color
+# Different color
 colors = []
 for i in range (10):
     colors . append ( lag_min [i]/float(max(lag_min)))
 
 plt.scatter(x_lat, x_lon ,s = lag_min, c=colors , alpha =1);
 
-#add text
+# Add text
 for i in range (10):
     myx = x_lat[i]
     myy = x_lon[i]
@@ -313,10 +313,12 @@ First, we select Q train stops from the dataframe and put it into a new datafram
 
 ```
 index_list = list(Schedule.index)
+
 index_q = []
 for q in index_list:
     if 'Q' in q:
         index_q.append(q)
+	
 q_schedule = Schedule.loc[index_q, :]
 ```
 Then, we calculate the time interval for all stops, compute the average and convert it into seconds for better visulization
@@ -326,12 +328,12 @@ time_interval = []
 for i in range(len(q_schedule.columns)-1):
     time_interval.append(list(q_schedule[i+1] - q_schedule[i]))
 
-# convert time intervals from timedelta format to seconds
+# Convert time intervals from timedelta format to seconds
 for a in range(len(time_interval)):
     for b in range(len(time_interval[a])):
         time_interval[a][b] = time_interval[a][b].total_seconds()
 
-# convert time interval data from lists to dataframe
+# Convert time interval data from lists to dataframe
 time_interval_df = pd.DataFrame(time_interval)
 
 # Calculate the average time interval of all stops
@@ -342,14 +344,14 @@ q_schedule['Average Time Interval'] = average_time_interval
 Finally, plot the average time interval into bar chart for visulization and save it as png file
 
 ```
-# set labels and x axis of the plot
+# Set labels and x axis of the plot
 labels = list(q_schedule.index)
 x = range(len(labels))
 
 # Plot the Average Time Interval for different Q train stops
 fig, ax = plt.subplots()
 
-# mark title, x and y axis labels
+# Mark title, x and y axis labels
 
 plt.bar(x, average_time_interval)
 plt.xticks(x, labels)
@@ -370,7 +372,6 @@ The output from this code is shown below:
 From terminal window
 
 1) Install the underground package
-
 ```
 pip install underground
 ```
@@ -378,7 +379,6 @@ pip install underground
 2) Change to the respective directory
 
 3) Type the following command to open jupyter notebook
-
 ```
 jupyter notebook
 ```
