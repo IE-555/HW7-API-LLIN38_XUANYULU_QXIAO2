@@ -382,10 +382,11 @@ pip install underground
 ```
 jupyter notebook
 ```
+4) Download 'stops.text' file and save it into the same directory where this notebook is saved
 
-4) Open the notebook file HW7_NYC_MTA_API.ipynb
+5) Open the notebook file HW7_NYC_MTA_API.ipynb
 
-5) Run through the codes, and plots will be shown and saved in the same directory.
+6) Run through the codes, and plots will be shown and saved in the same directory.
 
 ---
 
