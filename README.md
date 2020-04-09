@@ -85,7 +85,7 @@ First we need a free API key to request data from the MTA.
 - Get route feed
 
 ```
-API_KEY = '5H3pxsm5LT8OwtBs9LWoWaNGf0j67zER1dxQL214' 
+API_KEY = '            '    # import your API key
 ROUTE = 'Q'  
 feed = SubwayFeed.get(ROUTE, api_key=API_KEY)
 ```
