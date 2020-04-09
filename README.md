@@ -89,6 +89,7 @@ API_KEY = '5H3pxsm5LT8OwtBs9LWoWaNGf0j67zER1dxQL214'
 ROUTE = 'Q'  
 feed = SubwayFeed.get(ROUTE, api_key=API_KEY)
 ```
+- *NOTE: This API key only works with underground package version v3.*
 
 - Get route raw data of route Q and its expected arrival times
 ```
