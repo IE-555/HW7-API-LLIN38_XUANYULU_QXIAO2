@@ -63,6 +63,8 @@ The code, `HW7_NYC_MTA_API.ipynb`, begins by importing necessary Python packages
 
 ```
 import os
+
+# These two functions from underground package are used for MTA feed analysis.
 from underground import metadata, SubwayFeed
 
 import pandas as pd
@@ -85,7 +87,7 @@ First we need a free API key to request data from the MTA.
 - Get route feed
 
 ```
-API_KEY = '            '    # import your API key
+API_KEY = '            '    # import your registered API key
 ROUTE = 'Q'  
 feed = SubwayFeed.get(ROUTE, api_key=API_KEY)
 ```
