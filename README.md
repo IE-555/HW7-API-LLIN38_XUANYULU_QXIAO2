@@ -170,7 +170,8 @@ A snapshot of "Schedule2" dataframe is shown below:
 
 <br/>
 
-Plot 1: Scatter plot of top 10 stations waiting time if the passenger missing the upcoming one (the longer waiting, the bigger the dots, x-axis: latitude, y-axis: longtitude):
+Plot 1: Scatter plot of top 10 stations waiting time if the passenger missing the upcoming one
+- The longer the waiting time, the bigger the dots (x-axis: latitude, y-axis: longtitude). 
 
 Find the nearest top 10 stations:
 ```
