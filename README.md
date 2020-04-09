@@ -183,7 +183,7 @@ A text "stops.txt" also shows information coordinates for each stop:
 
 ![Image of Plot](images/stops_txt.PNG)
 
-The stops information can be read and stored as dataframe named "coord_df":
+The stops information can be read and stored as dataframe named "coord_df".
 ```
 coord_df = pd.read_csv('stops.txt')
 print(coord_df)
@@ -306,7 +306,8 @@ The output from this code is shown below:
 <br/>
 
 Plot 3: Average Time Interval of Q Train Stops
-This figure plots the average time interval for each Q train stops from the data source in order to show the busyness of the train station for further constrction purposes.
+
+- This figure plots the average time interval for each Q train stops from the data source in order to show the busyness of the train station for further constrction purposes.
 
 First, we select Q train stops from the dataframe and put it into a new dataframe q_schedule by looping through to select stops belong to Q train
 
@@ -384,7 +385,7 @@ jupyter notebook
 
 4) Open the notebook file HW7_NYC_MTA_API.ipynb
 
-5) Run through the codes, and the plots will be shown and saved in the same directory.
+5) Run through the codes, and plots will be shown and saved in the same directory.
 
 ---
 
