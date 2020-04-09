@@ -72,8 +72,8 @@ from datetime import datetime
 
 %matplotlib notebook
 import matplotlib.pyplot as plt
-
 ```
+
 <br/>
 
 **In this section of code, we will import data from online API source.**
@@ -97,6 +97,8 @@ q_train_stops
 ```
 
 A snapshot of "q_train_stops" data is shown below:
+
+
 ![Image of Plot](images/Q_train.png)
 
 
@@ -324,12 +326,15 @@ Then, we calculate the time interval for all stops, compute the average and conv
 time_interval = []
 for i in range(len(q_schedule.columns)-1):
     time_interval.append(list(q_schedule[i+1] - q_schedule[i]))
+
 # convert time intervals from timedelta format to seconds
 for a in range(len(time_interval)):
     for b in range(len(time_interval[a])):
         time_interval[a][b] = time_interval[a][b].total_seconds()
+
 # convert time interval data from lists to dataframe
 time_interval_df = pd.DataFrame(time_interval)
+
 # Calculate the average time interval of all stops
 average_time_interval = list(time_interval_df.mean())
 q_schedule['Average Time Interval'] = average_time_interval
@@ -341,9 +346,12 @@ Finally, plot the average time interval into bar chart for visulization and save
 # set labels and x axis of the plot
 labels = list(q_schedule.index)
 x = range(len(labels))
+
 # Plot the Average Time Interval for different Q train stops
 fig, ax = plt.subplots()
+
 # mark title, x and y axis labels
+
 plt.bar(x, average_time_interval)
 plt.xticks(x, labels)
 ax.set_ylabel('Average Time Interval')
@@ -357,20 +365,8 @@ The output from this code is shown below:
 
 ---
 
+
 ## How to Run the Code
-*Provide step-by-step instructions for running the code.  For example, I like to run code from the terminal:*
-1. Open a terminal window.
-
-2. Change directories to where `needs_a_good_name.py` is saved.
-
-3. Type the following command:
-	```
-	python needs_a_good_name.py
-	```
-
-- *NOTE: You are welcome to provide instructions using Anaconda or IPython.*
-
-## How to Run the Code (Xuanyu)
 
 From terminal window
 
@@ -380,11 +376,7 @@ From terminal window
 pip install underground
 ```
 
-2) Change directory to hw7-api-llin38-master
-
-```
-cd /hw7-api-llin38-master/
-```
+2) Change to the respective directory
 
 3) Type the following command to open jupyter notebook
 
@@ -394,7 +386,7 @@ jupyter notebook
 
 4) Open the notebook file HW7_NYC_MTA_API.ipynb
 
-5) Run through the codes and the plots is shown and saved in the same directory
+5) Run through the codes, and the plots will be shown and saved in the same directory.
 
 ---
 
