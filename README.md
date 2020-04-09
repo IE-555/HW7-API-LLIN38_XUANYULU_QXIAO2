@@ -164,7 +164,14 @@ A snapshot of "Schedule2" dataframe is shown below:
 
 <br/>
 
-- Then we can find nearest top 10 stations:
+
+**In this section of code, we will visualize the data and save them as png. images.**
+
+<br/>
+
+Plot 1: Scatter plot of top 10 stations waiting time if the passenger missing the upcoming one (the longer waiting, the bigger the dots, x-axis: latitude, y-axis: longtitude):
+
+Find the nearest top 10 stations:
 ```
 stop = []
 for i in range(10):
@@ -172,19 +179,20 @@ for i in range(10):
 print(stop)
 ```
 
-- A text "Stop.txt" also shows information coordinates for each stop:
+A text "Stop.txt" also shows information coordinates for each stop:
+
 ![Image of Plot](images/stops_txt.PNG)
 
-- The stops information can be read and stored as dataframe named "coord_df":
+The stops information can be read and stored as dataframe named "coord_df":
 ```
 coord_df = pd.read_csv('stops.txt')
 print(coord_df)
 ```
+A snapshot of stops longtitude and latitude information shown in dataframe "coord_df":
 
-- A snapshot of stops longtitude and latitude information shown in dataframe "coord_df":
 ![Image of Plot](images/stop_latlong.PNG)
 
-- Then the top 10 stations' names could be found respectively:
+Then the top 10 stations' names could be found respectively:
 ```
 stop_name = []
 
@@ -193,24 +201,20 @@ for i in range(10):
 print(stop_name)
 ```
 
-- Find these 10 stops coordinates:
+Find these 10 stops coordinates:
 ```
 x_lat = []
-
 for i in range(10):
     x_lat.append(coord_df.loc[coord_df['stop_id'] == stop[i],'stop_lat'].values[0])
 print(x_lat)
-```
 
-```
 x_lon = []
-
 for i in range(10):
     x_lon.append(coord_df.loc[coord_df['stop_id'] == stop[i],'stop_lon'].values[0])
 print(x_lon)
 ```
 
-- Then find time for these 10 stops, if missing upcoming train, how many minutes need wait for next one:
+Then find time for these 10 stops, if missing upcoming train, how many minutes need wait for next one:
 ```
 lag_min = []
 
@@ -223,14 +227,8 @@ for i in range(10):
 print (lag_min)
 ```
 
-<br/>
+Finally, we visualize the data. We save our plot as a png. image.
 
-
-**In this section of code, we will visualize the data and save them as png. images.**
-
-<br/>
-
-Plot 1: Scatter plot of top 10 stations waiting time if the passenger missing the upcoming one (the longer waiting, the bigger the plot, x-axis: latitude, y-axis: longtitude):
 ```
 plt.title ('Time Lag (minutes) for nearest top 10 stops')
 #plt.scatter (x_lat, x_lon, s = lag_min);
