@@ -179,7 +179,7 @@ for i in range(10):
 print(stop)
 ```
 
-A text "Stop.txt" also shows information coordinates for each stop:
+A text "stops.txt" also shows information coordinates for each stop:
 
 ![Image of Plot](images/stops_txt.PNG)
 
